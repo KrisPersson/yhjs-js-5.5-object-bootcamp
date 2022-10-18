@@ -153,9 +153,11 @@ function filterByGender(arr, gender) {
 
         if (gender === 'Male') {
             return maleList
-        } else if (gender === 'Female') {
+        } else {
             return femaleList
         }
+    } else {
+        return 'Invalid input'
     }
 }
 
@@ -219,8 +221,8 @@ function convertCountryDomain(code) {
 
     if (code !== 'GB' || code !== 'ES') { // Check for exceptions
         return code.toLowerCase()       // Run the common solution
-    } else {                            // Handle exceptions
-        switch (code) {
+    } else {                           
+        switch (code) {                  // Handle exceptions
             case 'GB':
                 return 'uk'
             case 'ES':
